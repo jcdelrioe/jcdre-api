@@ -11,9 +11,6 @@ if (!MONGODB_PASS) {
 const mongoUser = encodeURIComponent(MONGODB_USER)
 const mongoPass = encodeURIComponent(MONGODB_PASS)
 
-// const mongoPass = encodeURIComponent(MONGODB_PASS)
-// console.log(mongoPass)
-
 export const connectDB = async () => {
   try {
     const { connection } = await mongoose.connect(
