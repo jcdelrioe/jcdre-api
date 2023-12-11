@@ -14,7 +14,7 @@ const mongoPass = encodeURIComponent(MONGODB_PASS)
 export const connectDB = async () => {
   try {
     const { connection } = await mongoose.connect(
-      `mongodb+srv://${mongoUser}:${mongoPass}@cluster0.ds9cisp.mongodb.net/`
+      `mongodb+srv://${mongoUser}:${mongoPass}@cluster0.ef7liit.mongodb.net/`
     )
     if (connection.readyState === 1) {
       console.log("MongoDB connected")
