@@ -20,22 +20,25 @@ export default function LoginPage() {
     })
     if (res?.error) return setError(res.error as string)
 
-    if (res?.ok) return router.push("/dashboard")
+    if (res?.ok) return router.push("/dashboard/profile")
   }
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="flex justify-center items-center h-[calc(100vh-4rem)]">
+      <form
+        className="bg-neutral-900 px-8 py-10 w-3/12"
+        onSubmit={handleSubmit}
+      >
         {error && <div className="bg-red-500 text-white p-2 mb-2">{error}</div>}
-        <h1>Signin</h1>
+        <h1 className="text-4xl font-bold mb-7">Signin</h1>
 
         <input
-          className="bg-zinc-800 px-4 py-2 block mb-2"
+          className="bg-zinc-800 px-4 py-2 block mb-2 w-full"
           type="email"
           placeholder="Ingrese email"
           name="email"
         />
         <input
-          className="bg-zinc-800 px-4 py-2 block mb-2"
+          className="bg-zinc-800 px-4 py-2 block mb-2 w-full"
           type="password"
           placeholder="Ingrese password"
           name="password"
